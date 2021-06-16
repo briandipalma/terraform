@@ -5,6 +5,7 @@ variable "proxmox_api_url" {
 }
 
 variable "proxmox_user" {
+  default = "root@pam"
   type = string
   description = "The Proxmox user"
 }
