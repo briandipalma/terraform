@@ -14,3 +14,9 @@ variable "proxmox_password" {
   type = string
   description = "The Proxmox user password"
 }
+
+variable "pub_ssh_key" {
+  default = "~/.ssh/id_ed25519.pub"
+  type = string
+  description = "The Proxmox user password"
+}
