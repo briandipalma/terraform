@@ -1,6 +1,6 @@
 resource "proxmox_lxc" "basic" {
   target_node  = "pve"
-  hostname     = "lxc-basic"
+  hostname     = "jellyfin"
   ostemplate   = "local:vztmpl/ubuntu-21.04-standard_21.04-1_amd64.tar.gz"
   unprivileged = true
   ostype = "ubuntu"
@@ -28,6 +28,6 @@ resource "proxmox_lxc" "basic" {
   network {
     name   = "eth0"
     bridge = "vmbr0"
-    ip     = "dhcp"
+    ip     = "192.168.1.10/24"
   }
 }
